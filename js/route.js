@@ -1,17 +1,17 @@
 const express = require('express');
-const Controller = require('./control');
+const control = require('./control');
 
 const Router = express.Router();
 
 Router
 .route('/')
 .get(control.get)
-.post(control.post)
+.post(control.createUser)
 
 Router
 .route('/:id')
-.get(control.getByID)
-.patch(control.updateByID)
-.delete(control.deleteByID)
+.get(control.getUser)
+.patch(control.udpateUser)
+.delete(control.deleteUser)
 
 module.exports = Router;

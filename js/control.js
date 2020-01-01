@@ -20,7 +20,7 @@ exports.get = async(req, res) => {
     }
 };
 
-exports.getByID = async(req, res) => {
+exports.getUser = async(req, res) => {
     try
     {
         const user = await Complaint.findByID(req.params.id);
