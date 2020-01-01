@@ -74,6 +74,7 @@ exports.udpateUser = async(req, res) => {
     }
 }
 exports.deleteUser = async(req, res) => {
+    await Campus.findByIdAndUpdate(req.params.id, { active: false });
     try {
         res.status(204).json({
             status: 'success',
