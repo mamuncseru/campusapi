@@ -5,3 +5,5 @@ const Route = require('./js/route.js');
 app.use(express.json());
 
 app.use('campus/user', Route);
+
+module.exports = app;
